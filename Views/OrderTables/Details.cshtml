@@ -1,0 +1,35 @@
+﻿@model WebApplication8.Models.OrderTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutBEnd.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ord_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ord_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ord_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

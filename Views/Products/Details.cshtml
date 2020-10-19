@@ -1,0 +1,59 @@
+﻿@model WebApplication8.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutBEnd.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Cat_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Cat_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.P_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
